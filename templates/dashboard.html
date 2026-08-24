@@ -1,15 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>MOHAN'S VISION</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHAN'S VISION - Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1220;
+            color: white;
+        }
+
+        .header {
+            background: #111c33;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #263552;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logout {
+            color: white;
+            background: #e53935;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            margin-bottom: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #16233d;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #293b5f;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #55c7ff;
+        }
+
+        .value {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .section {
+            margin-top: 30px;
+            background: #16233d;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #55c7ff;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to MOHAN'S VISION</h1>
 
-    <p>Hello, {{ display_name }}!</p>
+    <div class="header">
+        <h1>MOHAN'S VISION</h1>
+        <a class="logout" href="/logout">Logout</a>
+    </div>
 
-    <p>Your account has been created successfully.</p>
+    <div class="container">
 
-    <a href="/logout">Logout</a>
+        <div class="welcome">
+            <h2>Welcome, {{ display_name }} 👋</h2>
+            <p>Your financial awareness dashboard</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Health Score</h3>
+                <div class="value">--</div>
+                <p>Financial health</p>
+            </div>
+
+            <div class="card">
+                <h3>Financial Goals</h3>
+                <div class="value">--</div>
+                <p>Your active goals</p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio</h3>
+                <div class="value">--</div>
+                <p>Investment overview</p>
+            </div>
+
+            <div class="card">
+                <h3>Security</h3>
+                <div class="value">✓</div>
+                <p>Account protected</p>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>MOHAN'S VISION</h2>
+            <p>
+                Smart financial awareness, portfolio insights,
+                fraud protection and goal tracking in one place.
+            </p>
+        </div>
+
+    </div>
+
 </body>
 </html>
