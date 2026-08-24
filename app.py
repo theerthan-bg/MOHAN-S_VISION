@@ -55,6 +55,7 @@ app.jinja_env.globals["now"] = datetime.now
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    mode = request.args.get("mode", "login")
     if "user_id" in session:
         return redirect(url_for("dashboard"))
 
@@ -96,7 +97,7 @@ def login():
                 flash(result, "error")
                 return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("login.html",mode=mode)
 
 
 @app.route("/logout")
