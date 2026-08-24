@@ -82,6 +82,53 @@
     <h1>MOHAN'S VISION</h1>
 
     <p>Login to continue</p>
+    {% if mode == "signup" %}
+
+<h2>Create Account</h2>
+
+<form method="POST" action="/login">
+    <input type="hidden" name="mode" value="signup">
+
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label>Phone</label>
+    <input type="text" name="phone" placeholder="Enter your phone number">
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Create password" required>
+
+    <button type="submit">Create Account</button>
+</form>
+
+<p style="text-align:center; margin-top:20px;">
+    Already have an account?
+    <a href="/login">Login</a>
+</p>
+
+{% else %}
+
+<form method="POST" action="/login">
+    <input type="hidden" name="mode" value="login">
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter your password" required>
+
+    <button type="submit">Login</button>
+</form>
+
+<p style="text-align:center; margin-top:20px;">
+    Don't have an account?
+    <a href="/login?mode=signup">Sign Up</a>
+</p>
+
+{% endif %}
 
     <form method="POST" action="/login">
 
