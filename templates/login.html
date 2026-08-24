@@ -130,31 +130,7 @@
 
 {% endif %}
 
-    <form method="POST" action="/login">
-
-        <input type="hidden" name="mode" value="login">
-
-        <label for="email">Email</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Enter your email"
-        >
-
-        <label for="password">Password</label>
-        <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            placeholder="Enter your password"
-        >
-
-        <button type="submit">Login</button>
-
-    </form>
+    
     <p style="text-align:center; margin-top:20px;">
     Don't have an account?
     <a href="/login?mode=signup">Sign Up</a>
