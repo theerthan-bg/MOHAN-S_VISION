@@ -357,11 +357,10 @@ A JS toggle switches visibility between `.lang-en` / `.lang-hi` classes across t
 
 ## 👥 Team
 
-| Role | Name |
+| Role | Students |
 |---|---|
-| Team Leader | *add name* |
-| Member | *add name* |
-| Member | *add name* |
+| Team Leader | *Mohan Gowda BR* |
+| Member | *Theerthan BG* |
 
 ---
 
